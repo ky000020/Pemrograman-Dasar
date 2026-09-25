@@ -1,0 +1,149 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNwM+3WedzpAqHXLGL//dlD",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ky000020/Pemrograman-Dasar/blob/main/MINGGU%203\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 44,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fwTf2oeGZwx0",
+        "outputId": "ccd99d15-bdab-4920-c368-0e7d00cdcb79"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "bilangan awal9\n",
+            "bilangan akhir9\n",
+            "penjumalahan= 18\n",
+            "pengurangan= 0\n",
+            "perkalian= 81\n",
+            "pemabagian= 1.0\n",
+            "pembagian bulat= 1\n",
+            "modulus= 0\n",
+            "Nilai ujian (0-100):90\n",
+            "kategori lulus (>= 60): True\n",
+            "umur20\n",
+            "memiliki SIM? (True/False): True\n",
+            "Diizinkan: True\n",
+            "Diberi izin: True\n",
+            "energi input:90\n",
+            "energi output:8\n",
+            "Efisisensi energi=8.89%\n",
+            "suhu C90\n",
+            "beban operasi %90\n",
+            "perlu maintanance: False\n"
+          ]
+        }
+      ],
+      "source": [
+        "# NAMA    :HENGKY RYANTO SIHOMBING\n",
+        "# NIM     :4232401055\n",
+        "# TANGAAL :9/22/2026\n",
+        "\n",
+        "# B_PRATIKUM\n",
+        "\n",
+        "#B1\n",
+        "\n",
+        "#1\n",
+        "bilangan_awal=int(input(\"bilangan awal\"))\n",
+        "bilangan_akhir=int(input(\"bilangan akhir\"))\n",
+        "\n",
+        "print(\"penjumalahan=\", bilangan_awal + bilangan_akhir)\n",
+        "print(\"pengurangan=\", bilangan_awal - bilangan_akhir)\n",
+        "print(\"perkalian=\", bilangan_awal * bilangan_akhir)\n",
+        "print(\"pemabagian=\", bilangan_awal / bilangan_akhir)\n",
+        "print(\"pembagian bulat=\", bilangan_awal // bilangan_akhir)\n",
+        "print(\"modulus=\", bilangan_awal % bilangan_akhir)\n",
+        "\n",
+        "\n",
+        "#2\n",
+        "nilai=int(input(\"Nilai ujian (0-100):\"))\n",
+        "penilaian=nilai >= 60\n",
+        "\n",
+        "print(\"kategori lulus (>= 60):\", penilaian)\n",
+        "\n",
+        "\n",
+        "\n",
+        "#3\n",
+        "umur_pengemudi=int(input(\"umur\"))\n",
+        "punya_sim = input(\"memiliki SIM? (True/False): \")== \"True\"\n",
+        "boleh_mengemudi=umur_pengemudi >= 17 and punya_sim\n",
+        "\n",
+        "print(\"Diizinkan:\", boleh_mengemudi)\n",
+        "hasil = (umur_pengemudi >= 17 and punya_sim) == True\n",
+        "print(\"Diberi izin:\", hasil)\n",
+        "\n",
+        "\n",
+        "\n",
+        "#B2\n",
+        "\n",
+        "#4\n",
+        "energi_input=float(input(\"energi input:\"))\n",
+        "energi_output=float(input(\"energi output:\"))\n",
+        "\n",
+        "efisiensi= (energi_output / energi_input)*100\n",
+        "\n",
+        "print(f\"Efisisensi energi={efisiensi:.2f}%\")\n",
+        "\n",
+        "#5\n",
+        "suhu_boiler= float(input(\"suhu C\"))\n",
+        "beban_operasi= float(input(\"beban operasi %\"))\n",
+        "perlu_maintenance=(suhu_boiler > 550) or (beban_operasi > 95)\n",
+        "\n",
+        "print(f\"perlu maintanance: {perlu_maintenance}\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. Python mengerjakan perkalian terlebih dahulu karena pengkali memiliki prioritas lebih tinggi daripada +. Jadi, 5×2 = 10, lalu 10+10=20. Jika ingin hasil 30, gunakan (10+5)*2 dan dalam teori perhitungan matematika bahwa pengkali dan pembagi di dahulukan dari pada penjumlah dan pengurang\n",
+        "\n",
+        "2. Operator relasional seperti >, <, >=, dan == digunakan untuk membandingkan dua nilai dan menghasilkan True atau False. Sedangkan operator logika seperti and, or, dan not digunakan untuk menggabungkan beberapa kondisi\n",
+        "\n",
+        "3. Salah satu kesalahan pada Python Issue Tracker adalah membahas kode yang tidak berjalan sesuai harapan karena cara Python menentukan prioritas dan pengelompokan ekspresi, karena programmer mengira beberapa operasi dikerjakan sebagai satu kelompok, padahal Python membacanya berdasarkan aturan precedence sehingga, Kesalahan seperti ini dapat menyebabkan hasil yang salah atau bahkan error\n",
+        "Solusinya dalam kasus tersebut menggunakan tanda kurung untuk memperjelas urutan operasi.\n"
+      ],
+      "metadata": {
+        "id": "vjBQrbF93gGW"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "Rd9jSYxCfyvR"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
